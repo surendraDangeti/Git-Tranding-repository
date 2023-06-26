@@ -1,1 +1,1 @@
-# Git-Tranding-repository
+# Git-Trending -repository
