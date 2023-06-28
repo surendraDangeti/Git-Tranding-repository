@@ -21,8 +21,9 @@ Reference document links for git oauth setup:https://supabase.com/docs/guides/au
 
 ## Installation
 To get started with the project, follow these steps:
-
-1. Clone the repository: git clone [URL]
-2. Install install dependencies: npm i --save
-3. To start the Project: npm run dev
+1. git clone https://github.com/surendraDangeti/Git-Trending-repositories.git
+2.cd .\Git-Trending-repositories
+3.npm i --saves
+4.npm i scripts
+5.npm run dev
     
