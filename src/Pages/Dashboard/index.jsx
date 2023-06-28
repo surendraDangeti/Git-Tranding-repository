@@ -19,11 +19,6 @@ import 'react-toastify/dist/ReactToastify.css';
 function Dashboard(props) {
     const [repoListData, setRepoListData] = useState("")
     const [showRepos, setShowRepos] = useState(true)
-    // const {trendingReposeData, loading} = useSelector((state) => ({...state.data}))
-    // let dispatch = useDispatch()
-
-    // const navigate = useNavigate();
-
     const [tempLanguage, setTempLanguage] = useState("")
     const [tempProgrammingLanguage, setTempProgrammingLanguage] = useState("")
     const [dateRange, setDateRange] = useState("")
@@ -36,10 +31,9 @@ function Dashboard(props) {
     const lastMonth = moment().subtract(1, 'month').startOf('month').format('YYYY-MM-DD');
 
 
+    // this useLayoutEffect reads the data from url and call the trending list api and also save the url parameters 
     useLayoutEffect(()=>{
         return(()=>{
-
-       
         let SearchUrl = window.location.search  
         if(verifyData(SearchUrl) && SearchUrl.length > 0){
             SearchUrl = SearchUrl.replace("?","") 
@@ -95,6 +89,8 @@ function Dashboard(props) {
 
     },[])
 
+
+    // this useEffect hook is for storing the trending list data from redux store
     useEffect(()=>{
         if(verifyData(props.trendingReposeData)){
             let data = props.trendingReposeData
@@ -146,6 +142,7 @@ useEffect(()=>{
 [updateStatus]
 )
 
+// this function handlebars the onChange filter functionality
 const onChangeHandlerFunction = (handler, value)=>{
     handler(value)
     setUpdateStatus(!updateStatus)

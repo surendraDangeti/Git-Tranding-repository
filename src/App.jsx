@@ -9,6 +9,8 @@ import { BsMoonStarsFill, BsFillSunFill } from "react-icons/Bs";
 import {useSelector, useDispatch} from 'react-redux'
 import { themeHandler } from './Redux/action';
 
+
+
 const App = ()=>{
   const supabase = createClient("https://jfhnehczdafyrifmdfkf.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpmaG5laGN6ZGFmeXJpZm1kZmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc3Nzc3OTEsImV4cCI6MjAwMzM1Mzc5MX0.FraaYIhxhMElfwLtoBVuN3WLCEZofijKxU3WL9UFpP8");
   const [isProtected, setIsProtected] = useState(false);
@@ -56,7 +58,8 @@ async function signout() {
   window.location.replace("/")
 }
 
- const NavBar=()=>{
+// the NavBar function return the NavBar component
+const NavBar=()=>{
   return(
     <div className=" mr-3 mb-3">
       <div className="tranding-navbar">
@@ -85,8 +88,13 @@ async function signout() {
  }
 
 const NotFoundPage = ()=>{
+  console.log("notaa", currentTheme)
   return(
-    <div className="text-white">Page Not Found</div>
+    <div className="page-content">
+       <div className="not-found-page">
+      <h2 className={currentTheme ? "text-white": "text-secondary fw-bold"}>404! Page Not Found</h2>
+    </div>
+    </div>
   )
 }
 
