@@ -1,0 +1,50 @@
+.page-content{
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
+.repose-section-navbar{
+    display: flex;
+    flex-wrap: wrap;
+    gap:8px
+}
+
+.repo-select-dropdown{
+    width:100px;
+    border:transparent;
+    padding-left:5px;
+}
+
+.repo-pl-select-dropdown{
+    width:140px;
+    border:transparent;
+    padding-left:5px;
+}
+
+.repo-dr-select-dropdown{
+    width:105px;
+    border:transparent;
+}
+
+.repo-srotOrder-select-dropdown{
+    width:80px;
+    border:transparent;
+    padding-left: 5px;
+}
+.dot-icon{
+  font-size: 26px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .developer-card-section{
+    display: flex;
+    gap: 15px;
+  }
